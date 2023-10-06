@@ -12,7 +12,7 @@ if (!function_exists('translate')) {
     function translate($key)
     {
         try {
-            App::setLocale('en');
+            App::setLocale('zh-CN');
             $lang_array = include(base_path('resources/lang/' . 'zh-CN' . '/lang.php'));
             $processed_key = ucfirst(str_replace('_', ' ', str_ireplace(['\'', '"', ',', ';', '<', '>', '?'], ' ', $key)));
             if (!array_key_exists($key, $lang_array)) {
